@@ -1,9 +1,11 @@
 package swing.bootstrap.controler;
 
+import swing.bootstrap.model.IModel;
 import swing.bootstrap.model.ParentModelImpl;
+import swing.bootstrap.model.RootTreeModelImpl;
 import swing.bootstrap.view.ITreeView;
 
-public abstract class TreeControler<M extends ParentModelImpl, V extends ITreeView>
+public abstract class TreeControler<M extends RootTreeModelImpl<IModel>, V extends ITreeView<IModel>>
 		extends IControler<M, V> {
 
 	private M model;

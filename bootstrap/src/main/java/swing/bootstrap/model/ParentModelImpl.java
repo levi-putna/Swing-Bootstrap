@@ -25,12 +25,19 @@ public abstract class ParentModelImpl<M extends IModel> extends ModelImpl<M>
 		items.remove(item);
 	}
 
-	public M getChild(Object parent, int index) {
+	public M getChild(int index) {
 		return items.get(index);
 	}
 
-	public int getChildCount(Object parent) {
+	public int getChildCount() {
 		return items.size();
+	}
+
+	public boolean isLeaf() {
+		if (items.isEmpty()) {
+			return true;
+		}
+		return false;
 	}
 
 }
